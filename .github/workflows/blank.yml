@@ -1,0 +1,24 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Hello
+        run: echo Hello, world!
+
+      - name: Ping binance
+        run: |
+          curl --request 'GET' -H 'accept: application/json' 'https://api.binance.com/api/v3/ping' -i

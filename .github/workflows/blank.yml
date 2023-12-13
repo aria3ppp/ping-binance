@@ -21,5 +21,6 @@ jobs:
 
       - name: Ping binance
         run: |
-          curl --request 'GET' -H 'accept: application/json' --fail-with-body 'https://bpay.binanceapi.com/api/v3/ping' -i
+          curl --request 'GET' -H 'accept: application/json' --fail-with-body 'https://fapi.binance.com/fapi/v1/ping' -i
+          
           
